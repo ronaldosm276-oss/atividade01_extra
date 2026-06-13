@@ -12,17 +12,13 @@ formDados.addEventListener('submit', (evt) => {
 
     const form_num = new FormData(formDados)
 
-    let num1 = parseFloat(form_num.get('num1'))
-    let num2 = parseFloat(form_num.get('num2'))
-    let num3 = parseFloat(form_num.get('num3'))
+    let num1 = (form_num.get('nome'))
+    let num2 = parseFloat(form_num.get('num1'))
 
-if (num1 === num2 && num2 === num3)
-    divResultado.innerHTML = `Triângulo Equilátero`
 
-else if (num1 == num2 || num2 == num3 || num3 == num1) { 
-    divResultado.innerHTML = `Triângulo Isóscele`
-}
+if (nome == "ABCD1234" && num1 == "1234")
+    divResultado.innerHTML = `ACESSO PERMITIDO`
 else 
-    divResultado.innerHTML = `Triângulo Escaleno`
+    divResultado.innerHTML = `ACESSO NEGADO`
 })
 
