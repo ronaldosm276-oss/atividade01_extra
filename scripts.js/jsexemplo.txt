@@ -12,16 +12,35 @@ formDados.addEventListener('submit', (evt) => {
 
     const form_num = new FormData(formDados)
 
+    let nome = (form_num.get('nome'))
     let num1 = parseFloat(form_num.get('num1'))
+    let num2 = parseFloat(form_num.get('num2'))
 
 
-    if (num1 % 3 == 0 && num1 % 7 == 0) {
+    let IMC = (num1 / (num2 * num2))
 
-    divResultado.innerHTML = `O número ${num1} é divisível por 3 e 7.`
+    let resultIMC = ""
+
+    if (IMC < 20) {
+        resultIMC = "ABAIXO DO PESO"
     }
-else 
-    divResultado.innerHTML = `O número ${num1} não é divisível por 3 e 7.`
-    })
+    else if (IMC >= 20 && IMC < 25) {
+        resultIMC = "NORMAL"
+    }
+    else if (IMC >= 25 && IMC < 30) {
+        resultIMC = "EXCESSO DE PESO"
+    }
+    else if (IMC >= 30 && IMC < 35) {
+        resultIMC = "OBESIDADE"
+    }
+    else {
+        resultIMC = "OBESIDADE MÓRBIDA"
+    }
+
+    IMCn = IMC.toFixed(1);
+
+    divResultado.innerHTML = `${nome}, seu IMC é ${IMCn}, logo, sua situação é: ${resultIMC}`
+})
 
 
 /*if (num1 === num2 && num2 === num3)

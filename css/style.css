@@ -1,0 +1,39 @@
+#geral{
+    margin: 20px;
+    padding: 20px;
+    background-color: antiquewhite;
+    width: 450px;
+    min-height: 500px;
+    border-radius: 10px;
+}
+
+form{
+    background-color: beige;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+label, input{
+    display: block;
+    margin: 10px 0px;
+}
+
+label{
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+#resultado{
+    width:300;
+    height: 250px;
+    background-color: beige;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    border-radius: 10px;
+    /*
+    border radius serviu para arrendodar a janela
+    */
+}
