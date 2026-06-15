@@ -34,4 +34,18 @@ else if (num1 == num2 || num2 == num3 || num3 == num1) {
 else 
     divResultado.innerHTML = `Triângulo Escaleno`
 })
+
+
+% - resto da divisão - 
+10 % 3 = 1
+10 % 2 = 0
+10 % 5 = 0
+10 % 4 = 2
+
+serve de forma geral para verificar o resto da divisão, podendo saber se o resto é 1, 2, 3, etc.
+
+para verificar se um número é divisível por outro, basta verificar se o resto da divisão é 0.
+
 */
+
+//ctrl shift p para abrir uma aba especial no topo ali

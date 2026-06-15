@@ -1,0 +1,3 @@
+#gitignore serve para ignorar arquivos e pastas que não queremos que sejam rastreados pelo controle de versão do Git. Ele é útil para evitar que arquivos temporários, arquivos de configuração local, dependências de projetos e outros arquivos que não são relevantes para o código-fonte sejam incluídos no repositório.
+*.txt
+
