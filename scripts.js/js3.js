@@ -11,41 +11,20 @@ formDados.addEventListener('submit', (evt) => {
     evt.preventDefault()
 
     const form_num = new FormData(formDados)
-
+    let nome = form_num.get('nome')
     let num1 = parseFloat(form_num.get('num1'))
+    let lucro = ''
 
+if (num1 < 10) lucro = 0.7;
 
-    if (num1 % 3 == 0 && num1 % 7 == 0) {
+else if (num1 <= 30) lucro = 0.5;
+else if (num1 <= 50) lucro = 0.4;
+else if (num1 > 50) lucro = 0.3;
 
-    divResultado.innerHTML = `O número ${num1} é divisível por 3 e 7.`
-    }
-else 
-    divResultado.innerHTML = `O número ${num1} não é divisível por 3 e 7.`
+let adicional = (num1 * lucro)
+let valorv = (num1 + adicional)
+
+divResultado.innerHTML = `O produto ${nome} tem adicional de R$${adicional} reais e vende-se por R$${valorv} reais.`
+
     })
 
-
-/*if (num1 === num2 && num2 === num3)
-    divResultado.innerHTML = `Triângulo Equilátero`
-
-else if (num1 == num2 || num2 == num3 || num3 == num1) { 
-    divResultado.innerHTML = `Triângulo Isóscele`
-}
-
-else 
-    divResultado.innerHTML = `Triângulo Escaleno`
-})
-
-
-% - resto da divisão - 
-10 % 3 = 1
-10 % 2 = 0
-10 % 5 = 0
-10 % 4 = 2
-
-serve de forma geral para verificar o resto da divisão, podendo saber se o resto é 1, 2, 3, etc.
-
-para verificar se um número é divisível por outro, basta verificar se o resto da divisão é 0.
-
-*/
-
-//ctrl shift p para abrir uma aba especial no topo ali
